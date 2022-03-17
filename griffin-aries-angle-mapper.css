@@ -68,6 +68,26 @@ table.tileMap {
      text-align: center;
     }
     
+.tiletriangleDS-highlighted  {
+     padding: 0px;
+     vertical-align: bottom; 
+     text-align: center;
+    width:0; 
+    border-bottom:30px solid yellow; 
+    border-left:25px solid white; 
+    border-right:25px solid white;
+    }
+.tiletriangleDS-highlighted p {
+text-align: center;
+vertical-align: middle;
+color: black;
+    bottom: -10px;
+    left: -10px;
+    position: relative;
+    width: 1px;
+    height: 1px;
+    margin: 0px;
+    }
 .tiletriangleDS-excluded  {
      padding: 0px;
      vertical-align: bottom; 
@@ -80,7 +100,7 @@ table.tileMap {
 .tiletriangleDS-excluded p {
 text-align: center;
 vertical-align: middle;
-color: #ffffff;
+color: white;
     bottom: -10px;
     left: -10px;
     position: relative;
@@ -100,8 +120,28 @@ color: #ffffff;
 .tiletriangleDS p {
 text-align: center;
 vertical-align: middle;
-color: #ffffff;
+color: white;
     bottom: -10px;
+    left: -10px;
+    position: relative;
+    width: 1px;
+    height: 1px;
+    margin: 0px;
+    }
+.tiletriangleUS-highlighted  {
+     padding: 0px;
+     vertical-align: top; 
+     text-align: center;
+    width:0; 
+    border-top:30px solid yellow; 
+    border-left:25px solid white; 
+    border-right:25px solid white;
+    }
+.tiletriangleUS-highlighted p {
+text-align: center;
+vertical-align: middle;
+color: black;
+    bottom: 30px;
     left: -10px;
     position: relative;
     width: 1px;
@@ -120,7 +160,7 @@ color: #ffffff;
 .tiletriangleUS-excluded p {
 text-align: center;
 vertical-align: middle;
-color: #ffffff;
+color: white;
     bottom: 30px;
     left: -10px;
     position: relative;
@@ -140,7 +180,7 @@ color: #ffffff;
 .tiletriangleUS p {
 text-align: center;
 vertical-align: middle;
-color: #ffffff;
+color: white;
     bottom: 30px;
     left: -10px;
     position: relative;
