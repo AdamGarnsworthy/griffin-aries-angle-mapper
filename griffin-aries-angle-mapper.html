@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>GRIFFIN-ARIES Array angles</title>
+
+        <link rel="stylesheet" href="griffin-aries-angle-mapper.css">
+    </head>
+
+    <body>
+        <div id='header'><b>GRIFFIN and ARIES angles for beta-gamma angular correlations</b></div>
+	  <br>
+<div>Go to: <a href="https://adamgarnsworthy.github.io/griffin-angle-mapper/griffin-angle-mapper.html">GRIFFIN Array angles for gamma-gamma angular correlations</a></div>
+	
+	<div id=ContainerDivMap>
+	  
+	<table align="center">
+	  <tr><td align="left">
+	    <label for="distanceSelector" class="right inline"><b>Distance of HPGe:</b></label>
+	    <select id="distanceSelector" onchange="PlotTables()">
+	      <option value="110">110 mm</option>
+	      <option value="145">145 mm</option>
+	    </select>
+	  </td></tr>
+	<tr><td align="left">
+	    <label for="crystalSelector" class="right inline"><b>GRIFFIN HPGe crystal:</b></label>
+	    <select id="crystalSelector" onchange="PlotTables()">
+	    </select>
+	  </td></tr>
+	<tr><td align="left">
+	    <label for="tileSelector" class="right inline"><b>ARIES tile:</b></label>
+	    <select id="tileSelector" onchange="PlotTables()">
+	    </select>
+	  </td></tr>
+	<tr><td align="left">
+	    <label for="tableSelector" class="right inline"><b>Table to Display:</b></label>
+	    <select id="tableSelector" onchange="PlotTables()">
+	      <option value="crystals">HPGe Crystal Angles</option>
+	      <option value="tiles">ARIES Tile Angles</option>
+	      <option value="combinationsCrystal">Crystal-Tile Combinations</option>
+	      <option value="combinationsTile">Tile-Crystal Combinations</option>
+	      <option value="angles">Angular Bins</option>
+	    </select>
+	  </td></tr>
+	<tr><td align="left" id="AngularBinCompositionSelectionContainer">
+	  </td></tr>
+	</table>
+
+	GRIFFIN
+	  <table id="MapTable" class="crystalMap" align="center"></table>
+	    ARIES
+	  <table id="MapTileTable" class="tileMap" align="center"></table>
+
+	<p id="instructions" align="left">
+	<b>Guidance:</b><br>
+	<ul align="left">
+	<li>Select a HPGe distance and a Table to display using the drop-down
+	menus above.</li>
+	<li>Select a GRIFFIN HPGe crystal in the drop-down menu above that will be
+	referenced in the Crystal-Tile Combinations table.</li>
+	<li>Select an ARIES tile in the drop-down menu above that will be
+	referenced in the Tile-Crystal Combinations table.</li>
+	<li>The tables on the right are scrollable.</li>
+	<li>Hover your mouse over a row of the Crystal/Tile Angles or Crystal-Tile/Tile-Crystal
+	<li>Combinations table to see the crystals/tiles highlighted on the map.</li>
+        <li>Click on the maps above to exclude crystals/tiles from the calculations.</li>
+	<li>Excluded crystals are not included in the number of pairs shown in
+	the Angular Bins.</li>
+	<li>Click them on the map again to include them once more.</li>
+        </ul>
+	</p>
+	</div>
+
+      <div id="ContainerDivTable">
+	<p id="TableTitle"></p>
+	<table id="MultiTable" align="center"></table>
+	</div>
+      </div>
+      
+      <div id='footer'></div>
+
+      <script src="griffin-aries-angle-mapper.js" type="text/javascript"></script>
+      
+    </body>
+</html>
