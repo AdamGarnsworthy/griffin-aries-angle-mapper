@@ -879,7 +879,7 @@ cell3.innerHTML = TileTheta[num].toFixed(1);
   HighlightTile(parseInt(this.id));
   });
 row.addEventListener('mouseout', function(e){
-  this.style.backgroundColor = white; 
+  this.style.backgroundColor = "white"; 
   unHighlightTile(parseInt(this.id));
   });
 }
