@@ -1021,14 +1021,14 @@ row.addEventListener('mouseover', function(e){
   if(ExcludedCrystalsList[parseInt(this.id)]==1){ color="red"; }else{ color="yellow"; }
   this.style.backgroundColor = color; 
   this.cells[0].style.backgroundColor = "green"; 
-  document.getElementById('CellTile'+(selectedTile+1)).style.backgroundColor = "green"; 
+  SelectTile(parseInt(selectedTile+1));
   document.getElementById('CellCrystal'+(this.id)).style.backgroundColor = color;
   });
 row.addEventListener('mouseout', function(e){
   if(ExcludedCrystalsList[parseInt(this.id)]==1){ color="red"; }else{ color="white"; }
   this.style.backgroundColor = "white"; 
   this.cells[0].style.backgroundColor = "white"; 
-  document.getElementById('CellTile'+(selectedTile+1)).style.backgroundColor = "white"; 
+  unSelectTile(parseInt(selectedTile+1));
   document.getElementById('CellCrystal'+(this.id)).style.backgroundColor = color;
   });
     
@@ -1244,8 +1244,6 @@ function unHighlightTile(ThisTileID) {
 
     tileID = parseInt(ThisTileID);
 
-    console.log('unHighlight'+tileID);
-
     if(ExcludedTilesList[tileID]==1){ return; }
     
   switch(tileID){
@@ -1266,6 +1264,56 @@ function unHighlightTile(ThisTileID) {
 	  document.getElementById('CellTile'+(tileID)).style.backgroundColor = "white";
       break;
       
+  }
+
+}
+
+function SelectTile(ThisTileID) {
+
+    tileID = parseInt(ThisTileID);
+    
+  switch(tileID){
+	// Special treatment for triangle positions
+  case 13:
+  case 14:
+  case 15:
+  case 16:
+      document.getElementById('CellTileTri'+(tileID)).className = "tiletriangleDS-selected";
+      break;
+  case 65:
+  case 66:
+  case 67:
+  case 68:
+      document.getElementById('CellTileTri'+(tileID)).className = "tiletriangleUS-selected";
+      break;
+  default:
+	  document.getElementById('CellTile'+(tileID)).style.backgroundColor = "green";
+      break;
+  }
+
+}
+
+function unSelectTile(ThisTileID) {
+
+    tileID = parseInt(ThisTileID);
+    
+  switch(tileID){
+	// Special treatment for triangle positions
+  case 13:
+  case 14:
+  case 15:
+  case 16:
+      document.getElementById('CellTileTri'+(tileID)).className = "tiletriangleDS";
+      break;
+  case 65:
+  case 66:
+  case 67:
+  case 68:
+      document.getElementById('CellTileTri'+(tileID)).className = "tiletriangleUS";
+      break;
+  default:
+	  document.getElementById('CellTile'+(tileID)).style.backgroundColor = "white";
+      break;
   }
 
 }

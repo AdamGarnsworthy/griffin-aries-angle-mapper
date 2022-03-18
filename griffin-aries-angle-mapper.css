@@ -68,6 +68,26 @@ table.tileMap {
      text-align: center;
     }
     
+.tiletriangleDS-selected  {
+     padding: 0px;
+     vertical-align: bottom; 
+     text-align: center;
+    width:0; 
+    border-bottom:30px solid green; 
+    border-left:25px solid white; 
+    border-right:25px solid white;
+    }
+.tiletriangleDS-selected p {
+text-align: center;
+vertical-align: middle;
+color: black;
+    bottom: -10px;
+    left: -10px;
+    position: relative;
+    width: 1px;
+    height: 1px;
+    margin: 0px;
+    }
 .tiletriangleDS-highlighted  {
      padding: 0px;
      vertical-align: bottom; 
@@ -122,6 +142,26 @@ text-align: center;
 vertical-align: middle;
 color: white;
     bottom: -10px;
+    left: -10px;
+    position: relative;
+    width: 1px;
+    height: 1px;
+    margin: 0px;
+    }
+.tiletriangleUS-selected  {
+     padding: 0px;
+     vertical-align: top; 
+     text-align: center;
+    width:0; 
+    border-top:30px solid green; 
+    border-left:25px solid white; 
+    border-right:25px solid white;
+    }
+.tiletriangleUS-selected p {
+text-align: center;
+vertical-align: middle;
+color: black;
+    bottom: 30px;
     left: -10px;
     position: relative;
     width: 1px;
